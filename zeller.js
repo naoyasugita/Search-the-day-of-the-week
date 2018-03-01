@@ -2,6 +2,9 @@ document.getElementById('btn').onclick = function(){
     let year = document.getElementById('id_year').value;
     let month = document.getElementById('id_month').value;
     let day = document.getElementById('id_day').value;
+    //     let year = 1900;
+    // let month = 1;
+    // let day = 1;
     if ( month == 1 ) {
         year -= 1;
         month = 13;
@@ -21,17 +24,16 @@ document.getElementById('btn').onclick = function(){
      h = ( day + a + y + Math.floor( y / 4 ) + r ) % 7 //main formula
 
      day = {
-        0:'sat',
-        1:'sum',
-        2:'mon',
-        3:'tue',
-        4:'wed',
-        5:'thu',
-        6:'fri'
+        0:'saturday',
+        1:'sunday',
+        2:'monday',
+        3:'tuesday',
+        4:'wednesday',
+        5:'thursday',
+        6:'friday'
      }
-     console.log(day[h])
-     return day[h];
-
+     var myh1 = document.getElementById("myh1");
+     myh1.innerHTML=day[h] + '!';
 }
 
 function check_year (year){
