@@ -1,5 +1,5 @@
 (function() {
-  var optionLoop,this_year, today;
+  let optionLoop, this_year, today;
   today = new Date();
   this_year = today.getFullYear();
 
